@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>bitz</title>
+        <title>bitz!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -10,6 +10,9 @@
     <body>
         <div class="container text-monospace">
             <h1 class="header text-white">bitz! - binary visualizer</h1>
+	    <div class="text-right">
+            <a href="https://twitter.com/intent/tweet?text=bitz!+binary+visualizer&via=wirehopper" class="text-right twitter-share-button" data-size="large" data-show-count="false">Tweet</a>
+	    </div>
             <p class="text-info lead">Click on the 0s and 1s to see the results of binary operations</p>
             <div id="app"></div>
             <footer class="text-white text-center mt-3">&copy; 2019 Betsy A. Gamrat</footer>
@@ -21,5 +24,21 @@
         <script src="js/one-byte.js"></script>
         <script src="js/one-card.js"></script>
         <script src="js/app.js"></script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
     </body>
 </html>
