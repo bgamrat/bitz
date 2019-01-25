@@ -1,0 +1,32 @@
+body {
+    background: #000;
+    padding-top: 25px;
+}
+h1 {
+    border-bottom: 3px solid #fff;
+}
+.byte {
+    padding: 7px;
+}
+.bit{
+    font-size: 100px;
+    font-weight: 300;
+    width: 75px;
+    height: 100px;
+    text-align: right;
+    color: #2f2;
+}
+.bit:invalid {
+    background: #f00;
+    border: 0;
+    box-shadow: 0;
+    color: #fff;
+}
+.content {
+    font-size: 100px;
+    text-align: center;
+}
+.card-header-text .btn {
+    font-size: 1.4em;
+    font-weight: 900;
+}
