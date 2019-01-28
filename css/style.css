@@ -8,25 +8,23 @@ h1 {
 .byte {
     padding: 7px;
 }
-.bit{
-    font-size: 100px;
-    font-weight: 300;
-    width: 75px;
-    height: 100px;
+.bit {
+    width: 1.2em;
     text-align: right;
     color: #2f2;
-}
-.bit:invalid {
-    background: #f00;
-    border: 0;
-    box-shadow: 0;
-    color: #fff;
+    font-weight: 300;
+    font-size: 2.0em;
+    background-color: #000;
 }
 .content {
-    font-size: 100px;
-    text-align: center;
+    font-size: 2.0em;
 }
-.card-header-text .btn {
-    font-size: 1.4em;
-    font-weight: 900;
+.output {
+    padding: 0;
+    margin: 0;
+}
+.bit:invalid {
+    border: none !important;
+    box-shadow: none !important;
+    color: #f00;
 }

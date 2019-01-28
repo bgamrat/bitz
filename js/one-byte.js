@@ -14,10 +14,10 @@ Vue.component('one-byte', {
             for (i = 0; i < l; i++) {
                 if (bits[i].value === '1') {
                     val += 1 << shift;
-                } 
+                }
                 shift--;
             }
-            this.$parent.$emit('bit-change', val, this.$attrs.id);
+            this.$emit('bit-change', val, this.$attrs.id);
         }
     },
     render(createElement) {
@@ -30,7 +30,7 @@ Vue.component('one-byte', {
                             maxlength: 1,
                             value: '0',
                             pattern: '[01]',
-                            'class': 'bit border border-primary bg-dark'},
+                            'class': 'bit border border-dark flex-fill text-center'},
                     on: {
 			    click: this.clickHandler
 			}}));
@@ -38,8 +38,7 @@ Vue.component('one-byte', {
         return createElement('div',
                 {
                     attrs: {
-                        'class': 'byte border border-secondary mx-auto my-5',
-                        'style': 'width:619px'
+                        'class': 'byte border border-secondary mx-auto my-2 d-flex'
                     }
                 },
                 els);
