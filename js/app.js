@@ -25,6 +25,22 @@ var app = new Vue({
     template: `
     <div>
         <div class="accordion" id="accordion">
+            <one-card id='hex' title='Hex' text='Converts from binary to hex'>
+                <template slot="input">
+                    <one-byte v-on:bit-change='updateHex'></one-byte>
+                </template>
+                <template slot="output">
+                    {{hex}}
+                </template>
+            </one-card>
+            <one-card id='utf8' title='UTF-8' text='Display the UTF-8 value of the byte'>
+                <template slot="input">
+                    <one-byte v-on:bit-change='updateUtf8'></one-byte>
+                </template>
+                <template slot="output">
+                    {{utf8}}
+                </template>
+            </one-card>
             <one-card id='and' title='Complement (~)' text='Complement reverses all the bits in a byte'>
                 <template slot="input">
                     <one-byte id='complement' v-on:bit-change="updateComplement"></one-byte>
@@ -76,22 +92,6 @@ var app = new Vue({
                 </template>
                 <template slot="output">
                     {{sub}}
-                </template>
-            </one-card>
-            <one-card id='hex' title='Hex' text='Converts from binary to hex'>
-                <template slot="input">
-                    <one-byte v-on:bit-change='updateHex'></one-byte>
-                </template>
-                <template slot="output">
-                    {{hex}}
-                </template>
-            </one-card>
-            <one-card id='utf8' title='UTF-8' text='Display the UTF-8 value of the byte'>
-                <template slot="input">
-                    <one-byte v-on:bit-change='updateUtf8'></one-byte>
-                </template>
-                <template slot="output">
-                    {{utf8}}
                 </template>
             </one-card>
         </div>
