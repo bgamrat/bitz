@@ -116,8 +116,7 @@ var app = new Vue({
             this.complement = this.$_app_makeBinaryString(~val);
         },
         updateHex(val) {
-            let hexMap$ = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
-            this.hex = hexMap$[Math.floor(parseInt(val)/16)] + hexMap$[parseInt(val & 15)];
+            this.hex = val.toString(16);
         },
         updateUtf8(val) {
             this.utf8 = String.fromCharCode(val);
